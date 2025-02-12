@@ -12,10 +12,10 @@
         targetURL = document.querySelector('.EntryTitleLink--selected').href;
       } else if (e.target.classList.contains('InlineArticle')) {
         // AT: Article View
-        targetURL = e.target.querySelector('.Article__title').href;
+        targetURL = e.target.querySelector('.ArticleTitle').href;
       } else if (document.querySelector('.InlineArticle') !== null) {
         // IA: Title-Only View(Select by J - K)
-        targetURL = document.querySelector('.InlineArticle').querySelector('.Article__title').href;
+        targetURL = document.querySelector('.InlineArticle').querySelector('.ArticleTitle').href;
       }
       if (targetURL !== null) {
         chrome.runtime.sendMessage({ url: targetURL });
